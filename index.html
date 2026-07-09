@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TECNOMETAL BEE AI</title>
+
+  <!-- Ícone da tela inicial (arquivo icon.png na MESMA pasta) -->
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="icon.png">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="shortcut icon" href="icon.png">
+
+  <!-- Nome do app + tela cheia + cor do tema -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="TECNOMETAL BEE AI">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="TECNOMETAL BEE AI">
+  <meta name="theme-color" content="#121C4D">
+
+  <style>
+    html, body { margin: 0; height: 100%; background: #0A1330; }
+    /* respeita a faixa de cima do iPhone (relógio/notch) em tela cheia */
+    #app {
+      position: fixed;
+      top: env(safe-area-inset-top, 0px);
+      left: 0; right: 0; bottom: 0;
+      width: 100%;
+      height: calc(100% - env(safe-area-inset-top, 0px));
+      border: 0;
+    }
+    #abrindo {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 18px;
+      background: radial-gradient(ellipse at 50% 38%, #12244d 0%, #0a1430 45%, #050a1c 100%);
+      color: #EAF1FB; font-family: 'Segoe UI', system-ui, sans-serif; z-index: 2;
+      transition: opacity .5s ease;
+    }
+    #abrindo img { width: 104px; height: auto; border-radius: 22px; filter: drop-shadow(0 0 16px rgba(59,111,212,.5)); }
+    #abrindo .marca { font-size: 26px; font-weight: 800; letter-spacing: 2px; }
+    #abrindo .marca .bee { color: #ffffff; }
+    #abrindo .marca .ai { color: #C9A86A; }
+    #abrindo .sub { font-size: 12px; letter-spacing: 3px; color: #C9A86A; }
+    #abrindo .anel { width: 40px; height: 40px; border: 3px solid rgba(59,111,212,.25); border-top-color: #3B6FD4; border-radius: 50%; animation: girar .9s linear infinite; }
+    @keyframes girar { to { transform: rotate(360deg); } }
+    #abrindo a { margin-top: 8px; color: #9fb6d6; font-size: 13px; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div id="abrindo">
+    <img src="icon.png" alt="TECNOMETAL BEE AI" onerror="this.style.display='none'">
+    <div class="marca">TECNOMETAL <span class="bee">BEE</span><span class="ai">AI</span></div>
+    <div class="sub">INTELIGÊNCIA · PERFORMANCE · RESULTADOS</div>
+    <div class="anel"></div>
+    <a href="https://script.google.com/macros/s/AKfycbwcOaV5dFa_rKvyk9mOKj7mKFB16awj5Z0835YZaQp9gkrqL_EwgL3YvTFK7hW6l7REAQ/exec" target="_blank">Não abriu? Toque aqui</a>
+  </div>
+
+  <iframe id="app" src="https://script.google.com/macros/s/AKfycbwcOaV5dFa_rKvyk9mOKj7mKFB16awj5Z0835YZaQp9gkrqL_EwgL3YvTFK7hW6l7REAQ/exec"
+    onload="document.getElementById('abrindo').style.opacity='0'; setTimeout(function(){document.getElementById('abrindo').style.display='none';}, 600);"></iframe>
+</body>
+</html>
