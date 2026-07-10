@@ -3,8 +3,8 @@
   "short_name": "BEE AI",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#0a1430",
-  "theme_color": "#12244d",
+  "background_color": "#0A1330",
+  "theme_color": "#121C4D",
   "icons": [
     {
       "src": "icon.png",
